@@ -23,8 +23,10 @@
 /*!40000 ALTER TABLE `salad` DISABLE KEYS */;
 /*!40000 ALTER TABLE `salad` ENABLE KEYS */;
 
--- Dumping data for table daotalk.user: ~0 rows (approximately)
+-- Dumping data for table daotalk.user: ~1 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` (`id`, `first_name`, `last_name`) VALUES
+	(1, 'yarmoliuk', 'andriana');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
