@@ -1,7 +1,7 @@
 
 
 import dao.DaoFactory;
-import dao.UserDao;
+import dao.GenericDao;
 import domain.User;
 import mysql.MySqlDaoFactory;
 import org.junit.Assert;
@@ -20,8 +20,8 @@ public class TestUserDao{
 public void testGetAll() throws Exception {
         DaoFactory daoFactory = new MySqlDaoFactory();
         List<User> list;
-        try (Connection con = daoFactory.getConnection()) {
-                UserDao dao = daoFactory.getUserDao(con);
+        try (Connection con = (Connection) daoFactory.getContext()) {
+                GenericDao dao = daoFactory.getDao(con, User.class);
                 list = dao.getAll();
         }
         Assert.assertNotNull(list);
