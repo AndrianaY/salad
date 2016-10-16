@@ -1,4 +1,4 @@
-package mentor.salad.sketch.saladmaker;
+package salad.sketch.saladmaker;
 
 import mentor.salad.sketch.ingredients.vegetables.Potatoe;
 
